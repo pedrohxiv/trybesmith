@@ -5,6 +5,12 @@ async function create(name: string, amount: string) {
   return newProduct;
 }
 
+async function getAll() {
+  const products = await productsModel.getAll();
+  return products;
+}
+
 export default {
   create,
+  getAll,
 };
